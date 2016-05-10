@@ -22,13 +22,13 @@ ng2-subscribe       // Angular 2 observable subscription
 
 ###HTML Snippets
 ```html
-ng2-ngClass     // Angular 2 ngClass snippet
-ng2-ngFor       // Angular 2 *ngFor snippet
-ng2-ngIf        // Angular 2 *ngIf snippet
-ng2-ngModel     // Angular 2 ngModel snippet
-ng2-routerLink  // Angular 2 routerLink snippet
-ng2-ngStyle     // Angular 2 ngStyle snippet
-ng2-ngSwitch    // Angular 2 ngSwitch snippet
+ng2-ngClass     <!-- Angular 2 ngClass snippet -->
+ng2-ngFor       <!-- Angular 2 *ngFor snippet -->
+ng2-ngIf        <!-- Angular 2 *ngIf snippet -->
+ng2-ngModel     <!-- Angular 2 ngModel snippet -->
+ng2-routerLink  <!-- Angular 2 routerLink snippet -->
+ng2-ngStyle     <!-- Angular 2 ngStyle snippet -->
+ng2-ngSwitch    <!-- Angular 2 ngSwitch snippet -->
 ```
 
 
