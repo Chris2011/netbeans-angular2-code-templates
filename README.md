@@ -3,7 +3,7 @@ This extension for NetBeans adds snippets for Angular 2 for TypeScript and HTML.
 
 It is based on the Visual Studio Code implementation: https://github.com/johnpapa/vscode-angular2-snippets
 
-![Use Extension](images/use-extension.gif)
+![Use Extension](images/NbAngular2TSSnippets.gif)
 
 ## Usage
 Type part of a snippet, press `enter` or `tab`, and the snippet unfolds.
@@ -54,3 +54,6 @@ You can't import directly the file into Netbeans. Indeed, you have to export FIR
   
   !!!Be Carefull!!!
   If you don't export all your code templates in the first step, when you will import the new code templates, all your previous code templates will be erase.
+
+##Known Bugs
+HTML and TypeScript code completion doesn't include the code templates, but the code templates are working well. I created bugs for this.
