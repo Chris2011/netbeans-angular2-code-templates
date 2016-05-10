@@ -35,13 +35,22 @@ ng2-ngSwitch    <!-- Angular 2 ngSwitch snippet -->
 Not supported yet, created a ticket to bring code templates to the code completion for TypeScript and HTML
 ---Alternatively, press `Ctrl`+`Space` (Windows, Linux) or `Cmd`+`Space` (OSX) to activate snippets from within the editor.---
 
-## Installation
+##How to install
 
-1. Install Visual Studio Code 0.10.1 or higher
-2. Launch Code
-3. From the command palette `Ctrl`-`Shift`-`P` (Windows, Linux) or `Cmd`-`Shift`-`P` (OSX)
-4. Select `Install Extension`
-5. Choose the extension
-6. Reload Visual Studio Code
+You can't import directly the file into Netbeans. Indeed, you have to export FIRST your Custome Code Templates. Once it's done, go into the zip file et paste the content of thus XML file into your XML files. If you don't do like this, you will loose every Code Templates created before it.
 
-![Install Extension](images/install-extension.gif)
+##Steps:
+  1) In Netbeans, go to Tools->Options->Editor->Code Templates->Export. In the window, enter the path for the configuration ZIP file and go to "Editor" and check "Code Templates". 
+  
+  2) Extract the ZIP file and then you have to navigate to "...\config\Editors\text\typescript\CodeTemplates\" and "...\config\Editors\text\html\CodeTemplates\"
+  
+  3) Open the XML file called "org-netbeans-modules-editor-settings-CustomCodeTemplates.xml" with a text editor and paste the content of the XML file that you have downloaded here BETWEEN the tags <codetemplates> and </codetemplates>.
+  
+  4) Close your text editor and now you have to zip the folder "config" (and the others files into root of config folder)
+  
+  5) Go back in Netbeans and now into Tools->Options->Editor->Code Templates, click on Import to import the new Code Templates.
+  
+  6) Test it into a TypeScript or HTML file (Examples: typescript shortcut "ng2-pipe" + TAB => import { Pipe, PipeTransform..., html shortcut "ng2-ngSwitch" + TAB => <div [ngSwitch]=...", ...)
+  
+  !!!Be Carefull!!!
+  If you don't export all your code templates in the first step, when you will import the new code templates, all your previous code templates will be erase.
