@@ -3,7 +3,11 @@ This extension for NetBeans adds snippets for Angular 2 for TypeScript and HTML.
 
 It is based on the Visual Studio Code implementation: https://github.com/johnpapa/vscode-angular2-snippets
 
+### TypeScript
 ![Use Extension](images/NbAngular2TSSnippets.gif)
+
+### HTML
+![Use Extension](images/NbAngular2HTMLSnippets.gif)
 
 ## Usage
 Type part of a snippet, press `enter` or `tab`, and the snippet unfolds.
@@ -20,7 +24,7 @@ ng2-service         // Angular 2 service
 ng2-subscribe       // Angular 2 observable subscription
 ```
 
-###HTML Snippets
+### HTML Snippets
 ```html
 ng2-ngClass     <!-- Angular 2 ngClass snippet -->
 ng2-ngFor       <!-- Angular 2 *ngFor snippet -->
@@ -35,11 +39,11 @@ ng2-ngSwitch    <!-- Angular 2 ngSwitch snippet -->
 Not supported yet, created a ticket to bring code templates to the code completion for TypeScript and HTML
 ---Alternatively, press `Ctrl`+`Space` (Windows, Linux) or `Cmd`+`Space` (OSX) to activate snippets from within the editor.---
 
-##How to install
+## How to install
 
 You can't import directly the file into Netbeans. Indeed, you have to export FIRST your Custome Code Templates. Once it's done, go into the zip file et paste the content of thus XML file into your XML files. If you don't do like this, you will loose every Code Templates created before it.
 
-##Steps:
+## Steps:
   1) In Netbeans, go to Tools->Options->Editor->Code Templates->Export. In the window, enter the path for the configuration ZIP file and go to "Editor" and check "Code Templates". 
   
   2) Extract the ZIP file and then you have to navigate to "...\config\Editors\text\typescript\CodeTemplates\" and "...\config\Editors\text\html\CodeTemplates\"
@@ -55,5 +59,5 @@ You can't import directly the file into Netbeans. Indeed, you have to export FIR
   !!!Be Carefull!!!
   If you don't export all your code templates in the first step, when you will import the new code templates, all your previous code templates will be erase.
 
-##Known Bugs
+## Known Bugs
 HTML and TypeScript code completion doesn't include the code templates, but the code templates are working well. I created bugs for this.
