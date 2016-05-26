@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE codetemplates PUBLIC "-//NetBeans//DTD Editor Code Templates settings 1.0//EN" "http://www.netbeans.org/dtds/EditorCodeTemplates-1_0.dtd">
+<codetemplates>
+    <codetemplate abbreviation="ng2-component" xml:space="preserve">
+        <code><![CDATA[import { Component, OnInit } from '@angular/core';
+
+@Component({
+    moduleId: module.id,
+    selector: '${selector}',
+    templateUrl: '${name}.component.html'
+ })
+ export class ${ComponentName}Component implements OnInit {
+    constructor() { }
+
+    ngOnInit() { }
+
+    $0
+} ]]></code>
+        <description><![CDATA[Angular 2 component snippet]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="ng2-route-path" xml:space="preserve">
+        <code><![CDATA[{ path: '/${path}', component: ${Component} }]]></code>
+        <description><![CDATA[Angular 2 route path snippet]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="ng2-component-root" xml:space="preserve">
+        <code><![CDATA[import { Component } from '@angular/core';
+import { HTTP_PROVIDERS } from '@angular/http';
+import { Routes, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router';
+import 'rxjs/Rx'; // load the full rxjs
+
+@Component({
+    moduleId: module.id,
+    selector: '${selector}',
+    templateUrl: '${name}.component.html',
+    directives: [ROUTER_DIRECTIVES],
+    providers: [
+        HTTP_PROVIDERS,
+        ROUTER_PROVIDERS
+    ]
+})
+@Routes([
+    ${cursor}
+])
+export class AppComponent {}]]></code>
+        <description><![CDATA[Angular 2 App root component snippet]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="ng2-bootstrap" xml:space="preserve">
+        <code><![CDATA[import { enableProdMode } from '@angular/core';
+import { bootstrap } from '@angular/platform-browser-dynamic';
+      
+import { ${AppComponent} } from './${name}.component';
+
+// enableProdMode();
+
+bootstrap(${AppComponent})
+    .then(success => console.log(`Bootstrap success`))
+    .catch(error => console.log(error));
+      ${cursor}]]></code>
+        <description><![CDATA[Angular 2 bootstrap snippet]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="ng2-pipe" xml:space="preserve">
+        <code><![CDATA[import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+    name: '${name}'
+})
+
+export class ${PipeName}Pipe implements PipeTransform {
+    transform(value: any, args: any[]): any {
+        ${cursor}
+    }
+}]]></code>
+        <description><![CDATA[Angular 2 pipe snippet]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="ng2-service" xml:space="preserve">
+        <code><![CDATA[import { Injectable } from '@angular/core';
+
+@Injectable()
+export class ${ServiceName}Service {
+    ${cursor}
+    constructor() { }
+}]]></code>
+        <description><![CDATA[Angular 2 service snippet]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="ng2-routes" xml:space="preserve">
+        <code><![CDATA[@Routes([
+    { path: '/${path}', component: ${Component} }
+])]]></code>
+        <description><![CDATA[Angular 2 route config snippet]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="ng2-http-get" xml:space="preserve">
+        <code><![CDATA[return this.http.get('${url}')
+      .map((res: Response) => res.json())${cursor}]]></code>
+        <description><![CDATA[Angular 2 Http.get snippet]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="ng2-subscribe" xml:space="preserve">
+        <code><![CDATA[ this.${service}.${function}
+      .subscribe(${arg} => this.${property} = ${arg});
+      ${cursor}]]></code>
+        <description><![CDATA[Angular 2 observable subscribe snippet]]></description>
+    </codetemplate>
+</codetemplates>
