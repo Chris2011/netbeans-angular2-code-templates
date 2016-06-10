@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
 <filesystem>
-     <folder name="Editors">
-         <folder name="text">
-             <folder name="html">
-                 <folder name="CodeTemplates">
-                     <file name="Html-Templates.xml" url="Html-Templates.xml" />
-                 </folder>
-             </folder>
-         </folder>
-     </folder>
-     <folder name="Editors">
-         <folder name="text">
-             <folder name="typescript">
-                 <folder name="CodeTemplates">
-                     <file name="Typescript-Templates.xml" url="Typescript-Templates.xml" />
-                 </folder>
-             </folder>
-         </folder>
-     </folder>
+    <folder name="Editors">
+        <folder name="text">
+            <folder name="html">
+                <folder name="CodeTemplates">
+                    <file name="Html-Templates.xml" url="Html-Templates.xml" />
+                </folder>
+            </folder>
+            <folder name="typescript">
+                <folder name="CodeTemplates">
+                    <file name="Typescript-Templates.xml" url="Typescript-Templates.xml" />
+                </folder>
+            </folder>
+        </folder>
+    </folder>
 </filesystem>
