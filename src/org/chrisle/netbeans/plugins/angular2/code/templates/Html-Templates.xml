@@ -27,7 +27,7 @@
     </codetemplate>
     <codetemplate abbreviation="ng2-ngSwitch" xml:space="preserve">
         <code><![CDATA[<div [ngSwitch]="${conditionExpression}">
-    <div *ngSwitchWhen="${expression}">${output}</div>
+    <div *ngSwitchCase="${expression}">${output}</div>
     <div *ngSwitchDefault>${output2}</div>
 </div>]]></code>
         <description><![CDATA[Angular 2 ngSwitch snippet]]></description>
