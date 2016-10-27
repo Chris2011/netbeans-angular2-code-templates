@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE codetemplates PUBLIC "-//NetBeans//DTD Editor Code Templates settings 1.0//EN" "http://www.netbeans.org/dtds/EditorCodeTemplates-1_0.dtd">
 <codetemplates>
-    <codetemplate abbreviation="tester" xml:space="preserve">
-        <code><![CDATA[<div>
-    
-</div>]]></code>
-    </codetemplate>
     <codetemplate abbreviation="ng2-ngStyle" xml:space="preserve">
         <code><![CDATA[[ngStyle]="{${style}: ${expression}}"]]></code>
         <description><![CDATA[Angular 2 ngStyle snippet]]></description>
@@ -32,7 +27,7 @@
     </codetemplate>
     <codetemplate abbreviation="ng2-ngSwitch" xml:space="preserve">
         <code><![CDATA[<div [ngSwitch]="${conditionExpression}">
-    <div *ngSwitchWhen="${expression}">${output}</div>
+    <div *ngSwitchCase="${expression}">${output}</div>
     <div *ngSwitchDefault>${output2}</div>
 </div>]]></code>
         <description><![CDATA[Angular 2 ngSwitch snippet]]></description>
