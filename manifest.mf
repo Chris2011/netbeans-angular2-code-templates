@@ -3,5 +3,5 @@ AutoUpdate-Show-In-Client: true
 OpenIDE-Module: org.chrisle.netbeans.plugins.angular2.code.templates
 OpenIDE-Module-Layer: org/chrisle/netbeans/plugins/angular2/code/templates/layer.xml
 OpenIDE-Module-Localizing-Bundle: org/chrisle/netbeans/plugins/angular2/code/templates/Bundle.properties
-OpenIDE-Module-Specification-Version: 1.0.1
+OpenIDE-Module-Specification-Version: 1.0.2
 
