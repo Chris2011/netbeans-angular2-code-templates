@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE codetemplates PUBLIC "-//NetBeans//DTD Editor Code Templates settings 1.0//EN" "http://www.netbeans.org/dtds/EditorCodeTemplates-1_0.dtd">
 <codetemplates>
-    <codetemplate abbreviation="ng2-component" xml:space="preserve">
+    <codetemplate abbreviation="ng2-component" xml:space="preserve" contexts="JavaScript-Code">
         <code><![CDATA[import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -18,11 +18,11 @@
 } ]]></code>
         <description><![CDATA[Angular 2 component snippet]]></description>
     </codetemplate>
-    <codetemplate abbreviation="ng2-route-path" xml:space="preserve">
+    <codetemplate abbreviation="ng2-route-path" xml:space="preserve" contexts="JavaScript-Code">
         <code><![CDATA[{ path: '/${path}', component: ${Component} }]]></code>
         <description><![CDATA[Angular 2 route path snippet]]></description>
     </codetemplate>
-    <codetemplate abbreviation="ng2-component-root" xml:space="preserve">
+    <codetemplate abbreviation="ng2-component-root" xml:space="preserve" contexts="JavaScript-Code">
         <code><![CDATA[import { Component } from '@angular/core';
 import { HTTP_PROVIDERS } from '@angular/http';
 import { Routes, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router';
@@ -44,7 +44,7 @@ import 'rxjs/Rx'; // load the full rxjs
 export class AppComponent {}]]></code>
         <description><![CDATA[Angular 2 App root component snippet]]></description>
     </codetemplate>
-    <codetemplate abbreviation="ng2-bootstrap" xml:space="preserve">
+    <codetemplate abbreviation="ng2-bootstrap" xml:space="preserve" contexts="JavaScript-Code">
         <code><![CDATA[import { enableProdMode } from '@angular/core';
 import { bootstrap } from '@angular/platform-browser-dynamic';
       
@@ -58,7 +58,7 @@ bootstrap(${AppComponent})
       ${cursor}]]></code>
         <description><![CDATA[Angular 2 bootstrap snippet]]></description>
     </codetemplate>
-    <codetemplate abbreviation="ng2-pipe" xml:space="preserve">
+    <codetemplate abbreviation="ng2-pipe" xml:space="preserve" contexts="JavaScript-Code">
         <code><![CDATA[import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
@@ -72,7 +72,7 @@ export class ${PipeName}Pipe implements PipeTransform {
 }]]></code>
         <description><![CDATA[Angular 2 pipe snippet]]></description>
     </codetemplate>
-    <codetemplate abbreviation="ng2-service" xml:space="preserve">
+    <codetemplate abbreviation="ng2-service" xml:space="preserve" contexts="JavaScript-Code">
         <code><![CDATA[import { Injectable } from '@angular/core';
 
 @Injectable()
@@ -82,18 +82,18 @@ export class ${ServiceName}Service {
 }]]></code>
         <description><![CDATA[Angular 2 service snippet]]></description>
     </codetemplate>
-    <codetemplate abbreviation="ng2-routes" xml:space="preserve">
+    <codetemplate abbreviation="ng2-routes" xml:space="preserve" contexts="JavaScript-Code">
         <code><![CDATA[@Routes([
     { path: '/${path}', component: ${Component} }
 ])]]></code>
         <description><![CDATA[Angular 2 route config snippet]]></description>
     </codetemplate>
-    <codetemplate abbreviation="ng2-http-get" xml:space="preserve">
+    <codetemplate abbreviation="ng2-http-get" xml:space="preserve" contexts="JavaScript-Code">
         <code><![CDATA[return this.http.get('${url}')
       .map((res: Response) => res.json())${cursor}]]></code>
         <description><![CDATA[Angular 2 Http.get snippet]]></description>
     </codetemplate>
-    <codetemplate abbreviation="ng2-subscribe" xml:space="preserve">
+    <codetemplate abbreviation="ng2-subscribe" xml:space="preserve" contexts="JavaScript-Code">
         <code><![CDATA[ this.${service}.${function}
       .subscribe(${arg} => this.${property} = ${arg});
       ${cursor}]]></code>
