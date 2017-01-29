@@ -41,4 +41,4 @@ Type part of a snippet, press <strong>enter</strong> or <strong>tab</strong>, an
 <p>Test it into a TypeScript or HTML file (Examples: typescript shortcut <strong>ng2-pipe</strong> + TAB => import { Pipe, PipeTransform..., html shortcut <strong>ng2-ngSwitch</strong> + TAB => &lt;div [ngSwitch]=...", ...)</p>
   
 <h2>Known Bugs</h2>
-HTML and TypeScript code completion doesn't include the code templates, but the code templates are working well. I created tickets for this.
+HTML code completion doesn't include the code templates, but the code templates are working well. A Ticket was created: https://netbeans.org/bugzilla/show_bug.cgi?id=250321
