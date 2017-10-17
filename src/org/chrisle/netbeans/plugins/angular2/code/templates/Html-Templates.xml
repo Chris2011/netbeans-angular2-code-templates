@@ -1,35 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE codetemplates PUBLIC "-//NetBeans//DTD Editor Code Templates settings 1.0//EN" "http://www.netbeans.org/dtds/EditorCodeTemplates-1_0.dtd">
 <codetemplates>
-    <codetemplate abbreviation="ng2-ngStyle" xml:space="preserve">
-        <code><![CDATA[[ngStyle]="{${style}: ${expression}}"]]></code>
-        <description><![CDATA[Angular 2 ngStyle snippet]]></description>
+    <codetemplate abbreviation="a-class" xml:space="preserve">
+        <code><![CDATA[[class]="${expression}"]]></code>
+        <description><![CDATA[Angular [class] binding]]></description>
     </codetemplate>
-    <codetemplate abbreviation="ng2-ngIf" xml:space="preserve">
-        <code><![CDATA[*ngIf="${expression}"]]></code>
-        <description><![CDATA[Angular 2 *ngIf snippet]]></description>
+    <codetemplate abbreviation="a-style" xml:space="preserve">
+        <code><![CDATA[[style.${property}]="${expression}"]]></code>
+        <description><![CDATA[Angular [style] binding]]></description>
     </codetemplate>
-    <codetemplate abbreviation="ng2-ngModel" xml:space="preserve">
-        <code><![CDATA[[(ngModel)]="${binding}"]]></code>
-        <description><![CDATA[Angular 2 ngModel snippet]]></description>
-    </codetemplate>
-    <codetemplate abbreviation="ng2-ngClass" xml:space="preserve">
+    <codetemplate abbreviation="a-ngClass" xml:space="preserve">
         <code><![CDATA[[ngClass]="{${cssClass}: ${expression}}"]]></code>
-        <description><![CDATA[Angular 2 ngClass snippet]]></description>
+        <description><![CDATA[Angular ngClass]]></description>
     </codetemplate>
-    <codetemplate abbreviation="ng2-ngFor" xml:space="preserve">
+    <codetemplate abbreviation="a-ngFor" xml:space="preserve">
         <code><![CDATA[*ngFor="let ${item} of ${list}"]]></code>
-        <description><![CDATA[Angular 2 *ngFor snippet]]></description>
+        <description><![CDATA[Angular *ngFor]]></description>
     </codetemplate>
-    <codetemplate abbreviation="ng2-routerLink" xml:space="preserve">
-        <code><![CDATA[[routerLink]="['${routeName}']"]]></code>
-        <description><![CDATA[Angular 2 routerLink snippet]]></description>
+    <codetemplate abbreviation="a-ngFor-trackBy" xml:space="preserve">
+        <code><![CDATA[*ngFor="let ${item} of ${list}; trackBy:${item}.id"]]></code>
+        <description><![CDATA[Angular *ngFor with trackBy]]></description>
     </codetemplate>
-    <codetemplate abbreviation="ng2-ngSwitch" xml:space="preserve">
+    <codetemplate abbreviation="a-ngForAsync" xml:space="preserve">
+        <code><![CDATA[*ngFor="let ${item} of ${stream} | async as ${list}"]]></code>
+        <description><![CDATA[Angular *ngForAsync]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="a-ngIf" xml:space="preserve">
+        <code><![CDATA[*ngIf="${expression}"]]></code>
+        <description><![CDATA[Angular *ngIf]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="a-ngIfElse" xml:space="preserve">
+        <code><![CDATA[*ngIf="${expression};else ${templateName}"]]></code>
+        <description><![CDATA[Angular *ngIfElse]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="a-ngModel" xml:space="preserve">
+        <code><![CDATA[[(ngModel)]="${binding}"]]></code>
+        <description><![CDATA[Angular ngModel]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="a-routerLink" xml:space="preserve">
+        <code><![CDATA[[routerLink]="['${routePath}']"]]></code>
+        <description><![CDATA[Angular routerLink]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="a-routerLink-param" xml:space="preserve">
+        <code><![CDATA[[routerLink]="['${routePath}', ${routeParameterValue}]"]]></code>
+        <description><![CDATA[Angular routerLink]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="a-select" xml:space="preserve">
+        <code><![CDATA[<select [(ngModel)]="${model}">
+<option *ngFor="let ${item} of ${list} [value]="${item}">{{${item}}}</option>
+</select>]]></code>
+        <description><![CDATA[<select> control with ngModel]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="a-ngStyle" xml:space="preserve">
+        <code><![CDATA[[ngStyle]="{${style}: ${expression}}"]]></code>
+        <description><![CDATA[Angular ngStyle]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="a-ngSwitch" xml:space="preserve">
         <code><![CDATA[<div [ngSwitch]="${conditionExpression}">
     <div *ngSwitchCase="${expression}">${output}</div>
     <div *ngSwitchDefault>${output2}</div>
 </div>]]></code>
-        <description><![CDATA[Angular 2 ngSwitch snippet]]></description>
+        <description><![CDATA[Angular ngSwitch snippet]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="a-prej" xml:space="preserve">
+        <code><![CDATA[<pre>{{${model} | json}}</pre>]]></code>
+        <description><![CDATA[Angular pre debug | json]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="a-preja" xml:space="preserve">
+        <code><![CDATA[<pre>{{${model} | async | json}}</pre>]]></code>
+        <description><![CDATA[Angular pre debug | async | json]]></description>
     </codetemplate>
 </codetemplates>
