@@ -16,9 +16,11 @@ Type part of a snippet, press <strong>enter</strong> or <strong>tab</strong>, an
 
 <h3>TypeScript Angular Snippets</h3>
 <ol>
-    <li><strong>a-component-root</strong> - root App component</li>
-    <li><strong>a-bootstrap</strong> - bootstraping, for main.ts</li>
     <li><strong>a-component</strong> - component</li>
+    <li><strong>a-component-inline</strong> - component with inline template</li>
+    <li><strong>a-component-root</strong> - root app component</li>
+    <li><strong>a-directive</strong> - directive</li>
+    <li><strong>a-bootstrap</strong> - bootstraping, for main.ts</li>
     <li><strong>a-pipe</strong> - pipe</li>
     <li><strong>a-route-config</strong> - @RouteConfig</li>
     <li><strong>a-route-path</strong> - routing path</li>
@@ -27,7 +29,14 @@ Type part of a snippet, press <strong>enter</strong> or <strong>tab</strong>, an
 </ol>
 
 <h3>TypeScript RxJS Snippets</h3>
-<ul></ul>
+<ul>
+    <li><strong>rx-observable</strong> - Rx <strong>Observale</strong> import</li>
+    <li><strong>rx-subject</strong> - Rx <strong>Subject</strong> import</li>
+    <li><strong>rx-replay-subject</strong> - Rx <strong>ReplaySubject</strong> import</li>
+    <li><strong>rx-behavior-subject</strong> - Rx <strong>BehaviorSubject</strong> import</li>
+    <li><strong>rx-add-operator</strong> - Rx add operator import</li>
+    <li><strong>rx-add-observable</strong> - Rx add observale import</li>
+</ul>
 
 <h3>HTML Snippets</h3>
 <ul>
