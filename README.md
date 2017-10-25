@@ -16,46 +16,50 @@ Type part of a snippet, press <strong>enter</strong> or <strong>tab</strong>, an
 
 <h3>TypeScript Angular Snippets</h3>
 <ol>
-    <li><strong>a-component</strong> - component</li>
-    <li><strong>a-component-inline</strong> - component with inline template</li>
-    <li><strong>a-component-root</strong> - root app component</li>
-    <li><strong>a-directive</strong> - directive</li>
-    <li><strong>a-bootstrap</strong> - bootstraping, for main.ts</li>
-    <li><strong>a-pipe</strong> - pipe</li>
-    <li><strong>a-route-config</strong> - @RouteConfig</li>
-    <li><strong>a-route-path</strong> - routing path</li>
-    <li><strong>a-service</strong> - service</li>
-    <li><strong>a-subscribe</strong> - observable subscription</li>
+    <li><strong>aComponent</strong> - component</li>
+    <li><strong>aComponent-inline</strong> - component with inline template</li>
+    <li><strong>aComponent-root</strong> - root app component</li>
+    <li><strong>aDirective</strong> - directive</li>
+    <li><strong>aGuardCanActive</strong> - <code>CanActivate</code> guard</li>
+    <li><strong>aPipe</strong> - pipe</li>
+    <li><strong>aResolver</strong> - resolver</li>
+    <li><strong>aRoute-config</strong> - @RouteConfig</li>
+    <li><strong>aRoute-path</strong> - routing path</li>
+    <li><strong>aService</strong> - service</li>
+    <li><strong>aSubscribe</strong> - observable subscription</li>
 </ol>
 
 <h3>TypeScript RxJS Snippets</h3>
 <ul>
-    <li><strong>rx-observable</strong> - Rx <strong>Observale</strong> import</li>
-    <li><strong>rx-subject</strong> - Rx <strong>Subject</strong> import</li>
-    <li><strong>rx-replay-subject</strong> - Rx <strong>ReplaySubject</strong> import</li>
-    <li><strong>rx-behavior-subject</strong> - Rx <strong>BehaviorSubject</strong> import</li>
-    <li><strong>rx-add-operator</strong> - Rx add operator import</li>
-    <li><strong>rx-add-observable</strong> - Rx add observale import</li>
+    <li><strong>rxObservable</strong> - Rx <strong>Observale</strong> import</li>
+    <li><strong>rxSubject</strong> - Rx <strong>Subject</strong> import</li>
+    <li><strong>rxReplaySubject</strong> - Rx <strong>ReplaySubject</strong> import</li>
+    <li><strong>rxBehaviorSubject</strong> - Rx <strong>BehaviorSubject</strong> import</li>
+    <li><strong>rxAddOperator</strong> - Rx add operator import</li>
+    <li><strong>rxAddObservable</strong> - Rx add observale import</li>
 </ul>
 
 <h3>HTML Snippets</h3>
 <ul>
-    <li><strong>a-class</strong> - [class] binding</li>
-    <li><strong>a-select</strong> - &lt;select&gt; control</li>
-    <li><strong>a-style</strong> - [style] binding</li>
-    <li><strong>a-ngClass</strong> - ngClass</li>
-    <li><strong>a-ngFor</strong> - *ngFor</li>
-    <li><strong>a-ngForAsync</strong> - *ngFor with async</li>
-    <li><strong>a-ngFor-trackBy</strong> - *ngFor with trackBy</li>
-    <li><strong>a-ngIf</strong> - *ngIf</li>
-    <li><strong>a-ngIfElse</strong> - *ngIf with else</li>
-    <li><strong>a-ngModel</strong> - ngModel</li>
-    <li><strong>a-routerLink</strong> - routerLink</li>
-    <li><strong>a-routerLink-param</strong> - routerLink with a route parameter</li>
-    <li><strong>a-ngStyle</strong> - ngStyle</li>
-    <li><strong>a-ngSwitch</strong> - ngSwitch</li>
-    <li><strong>a-prej</strong> - show the JSON form of a model</li>
-    <li><strong>a-preja</strong> - show the JSON form of a model, using async</li>
+    <li><strong>aClass</strong> - [class] binding</li>
+    <li><strong>aNgClass</strong> - ngClass</li>
+    <li><strong>aNgContainer</strong> - &lt;ng-container&gt; element</li>
+    <li><strong>aNgContent</strong> - &lt;ng-content&gt; element</li>
+    <li><strong>aNgFor</strong> - *ngFor</li>
+    <li><strong>aNgForAsync</strong> - *ngFor with async</li>
+    <li><strong>aNgForTrackBy</strong> - *ngFor with trackBy</li>
+    <li><strong>aNgIf</strong> - *ngIf</li>
+    <li><strong>aNgIfElse</strong> - *ngIf with else</li>
+    <li><strong>aNgModel</strong> - ngModel</li>
+    <li><strong>aNgStyle</strong> - ngStyle</li>
+    <li><strong>aNgSwitch</strong> - ngSwitch</li>
+    <li><strong>aNgTemplate</strong> - &lt;ng-template&gt; element</li>
+    <li><strong>aPrej</strong> - show the JSON form of a model</li>
+    <li><strong>aPreja</strong> - show the JSON form of a model, using async</li>
+    <li><strong>aRouterLink</strong> - routerLink</li>
+    <li><strong>aRouterLinkParam</strong> - routerLink with a route parameter</li>
+    <li><strong>aSelect</strong> - &lt;select&gt; control</li>
+    <li><strong>aStyle</strong> - [style] binding</li>
 </ul>
 
 
