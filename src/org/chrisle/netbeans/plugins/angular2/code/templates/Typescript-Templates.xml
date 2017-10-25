@@ -1,102 +1,390 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE codetemplates PUBLIC "-//NetBeans//DTD Editor Code Templates settings 1.0//EN" "http://www.netbeans.org/dtds/EditorCodeTemplates-1_0.dtd">
 <codetemplates>
-    <codetemplate abbreviation="ng2-component" xml:space="preserve" contexts="JavaScript-Code">
+    <codetemplate abbreviation="aComponent" xml:space="preserve" contexts="JavaScript-Code">
         <code><![CDATA[import { Component, OnInit } from '@angular/core';
 
 @Component({
-    moduleId: module.id,
-    selector: '${selector}',
+    selector: '${selector-name}',
     templateUrl: '${name}.component.html'
  })
- export class ${ComponentName}Component implements OnInit {
-    constructor() { }
+ export class ${Name}Component implements OnInit {
+    constructor() {}
 
-    ngOnInit() { }
-
-    $0
-} ]]></code>
-        <description><![CDATA[Angular 2 component snippet]]></description>
+    ngOnInit() {}${cursor}
+}]]></code>
+        <description><![CDATA[Angular component]]></description>
     </codetemplate>
-    <codetemplate abbreviation="ng2-route-path" xml:space="preserve" contexts="JavaScript-Code">
-        <code><![CDATA[{ path: '/${path}', component: ${Component} }]]></code>
-        <description><![CDATA[Angular 2 route path snippet]]></description>
-    </codetemplate>
-    <codetemplate abbreviation="ng2-component-root" xml:space="preserve" contexts="JavaScript-Code">
-        <code><![CDATA[import { Component } from '@angular/core';
-import { HTTP_PROVIDERS } from '@angular/http';
-import { Routes, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router';
-import 'rxjs/Rx'; // load the full rxjs
+    <codetemplate abbreviation="aComponentInline" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[import { Component, OnInit } from '@angular/core';
 
 @Component({
-    moduleId: module.id,
-    selector: '${selector}',
-    templateUrl: '${name}.component.html',
-    directives: [ROUTER_DIRECTIVES],
-    providers: [
-        HTTP_PROVIDERS,
-        ROUTER_PROVIDERS
-    ]
-})
-@Routes([
-    ${cursor}
-])
-export class AppComponent {}]]></code>
-        <description><![CDATA[Angular 2 App root component snippet]]></description>
-    </codetemplate>
-    <codetemplate abbreviation="ng2-bootstrap" xml:space="preserve" contexts="JavaScript-Code">
-        <code><![CDATA[import { enableProdMode } from '@angular/core';
-import { bootstrap } from '@angular/platform-browser-dynamic';
-      
-import { ${AppComponent} } from './${name}.component';
+    selector: '${selector-name}',
+    template: `${cursor}`
+ })
+ export class ${Name}Component implements OnInit {
+    constructor() {}
 
-// enableProdMode();
-
-bootstrap(${AppComponent})
-    .then(success => console.log(`Bootstrap success`))
-    .catch(error => console.log(error));
-      ${cursor}]]></code>
-        <description><![CDATA[Angular 2 bootstrap snippet]]></description>
-    </codetemplate>
-    <codetemplate abbreviation="ng2-pipe" xml:space="preserve" contexts="JavaScript-Code">
-        <code><![CDATA[import { Pipe, PipeTransform } from '@angular/core';
-
-@Pipe({
-    name: '${name}'
-})
-
-export class ${PipeName}Pipe implements PipeTransform {
-    transform(value: any, args: any[]): any {
-        ${cursor}
-    }
+    ngOnInit() {}${cursor}
 }]]></code>
-        <description><![CDATA[Angular 2 pipe snippet]]></description>
+        <description><![CDATA[Angular component with an inline template]]></description>
     </codetemplate>
-    <codetemplate abbreviation="ng2-service" xml:space="preserve" contexts="JavaScript-Code">
+    <codetemplate abbreviation="aService" xml:space="preserve" contexts="JavaScript-Code">
         <code><![CDATA[import { Injectable } from '@angular/core';
 
 @Injectable()
-export class ${ServiceName}Service {
+export class ${Name}Service {
     ${cursor}
-    constructor() { }
+    constructor() {}
 }]]></code>
-        <description><![CDATA[Angular 2 service snippet]]></description>
+        <description><![CDATA[Angular service]]></description>
     </codetemplate>
-    <codetemplate abbreviation="ng2-routes" xml:space="preserve" contexts="JavaScript-Code">
-        <code><![CDATA[@Routes([
-    { path: '/${path}', component: ${Component} }
-])]]></code>
-        <description><![CDATA[Angular 2 route config snippet]]></description>
+    <codetemplate abbreviation="aPipe" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+    name: '${selector-name}'
+})
+
+export class ${Name}Pipe implements PipeTransform {
+    transform(value: any, ...args: any[]): any {
+        ${cursor}
+    }
+}]]></code>
+        <description><![CDATA[Angular pipe]]></description>
     </codetemplate>
-    <codetemplate abbreviation="ng2-http-get" xml:space="preserve" contexts="JavaScript-Code">
+    <codetemplate abbreviation="aRoutePathDefault" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[{ path: '', pathMatch: 'full', redirectTo: '${path}' }${cursor}]]></code>
+        <description><![CDATA[Angular default route path]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="aRoutePath404" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[{ path: '**', pathMatch: 'full', component: ${PathNotFoundComponent} }${cursor}]]></code>
+        <description><![CDATA[Angular 404 route path]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="aRoutePathEager" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[{ path: '${path}', component: ${Name}Component }]]></code>
+        <description><![CDATA[Angular eager route path]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="aRoutePathLazy" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[{ path: '${path}', loadChildren: '${lazy-path}#${lazy-module}' }]]></code>
+        <description><![CDATA[Angular lazy route path]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="aHttpGet" xml:space="preserve" contexts="JavaScript-Code">
         <code><![CDATA[return this.http.get('${url}')
-      .map((res: Response) => res.json())${cursor}]]></code>
-        <description><![CDATA[Angular 2 Http.get snippet]]></description>
+      .map((res: Response) => res.json());${cursor}]]></code>
+        <description><![CDATA[Angular Http.get]]></description>
     </codetemplate>
-    <codetemplate abbreviation="ng2-subscribe" xml:space="preserve" contexts="JavaScript-Code">
+    <codetemplate abbreviation="aHttpclientGet" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[return this.httpClient.get('${url}');${cursor}]]></code>
+        <description><![CDATA[Angular HttpClient.get]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="aServiceHttp" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[import { Injectable } from '@angular/core';
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
+
+@Injectable()
+export class ${Name}Service {
+    constructor(private http: Http) {}
+    ${cursor}
+}]]></code>
+        <description><![CDATA[Angular service with Http]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="aServiceHttpclient" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+@Injectable()
+export class ${Name}Service {
+    constructor(private httpClient: HttpClient) {}
+    ${cursor}
+}]]></code>
+        <description><![CDATA[Angular service with HttpClient]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="aHttpInterceptorLogging" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[import { HttpInterceptor, HttpHandler, HttpRequest, HttpEvent, HttpResponse } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/do';
+
+export class LogInterceptor implements HttpInterceptor {
+    constructor() {}
+
+    intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+        const started = Date.now();
+        return next.handle(req).do(event => {
+            if(event instanceof HttpResponse) {
+                const elapsed = Date.now() - started;
+                console.log(`Request for \\${req.urlWithParams} took \\${elapsed} ms.`);
+            }
+        });
+    }
+}
+}]]></code>
+        <description><![CDATA[Angular HttpInterceptor for Logging HttpClient]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="aHttpInterceptorHeaders" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[import { Injectable } from '@angular/core';
+import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+
+@Injectable()
+export class HeaderInterceptor implements HttpInterceptor {
+    constructor() {}
+
+    intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+        const headers = req.headers.set('Content-Type', 'application/json'),
+                authReq = req.clone({ headers });
+
+        return next.handle(authReq);
+    }
+}
+}]]></code>
+        <description><![CDATA[Angular HttpInterceptor for headers HttpClient]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="aHttpInterceptor" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[import { Injectable } from '@angular/core';
+import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+
+@Injectable()
+export class HeaderInterceptor implements HttpInterceptor {
+    constructor() {}
+
+    intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+        return next.handle(req);
+    }
+}
+}]]></code>
+        <description><![CDATA[Empty Angular HttpInterceptor for HttpClient]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="aOutputEvent" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[@Output() ${eventName} = new EventEmitter<${eventType}>();]]></code>
+        <description><![CDATA[Angular @Output event and emitter]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="aSubscribe" xml:space="preserve" contexts="JavaScript-Code">
         <code><![CDATA[ this.${service}.${function}
       .subscribe(${arg} => this.${property} = ${arg});
       ${cursor}]]></code>
-        <description><![CDATA[Angular 2 observable subscribe snippet]]></description>
+        <description><![CDATA[Rx Observable subscribe]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="aComponentRoot" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[import { Component } from '@angular/core';
+
+@Component({
+    selector: '${prefix-app}',
+    template: '<router-outlet></router-outlet>',
+})
+export class ${App}Component {}
+${cursor}]]></code>
+        <description><![CDATA[Angular App root component]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="aModuleRoot" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
+
+import { ${App}Component } from './${app}.component';
+import { AppRoutingModule } from './${app}.routing'; //TODO: Create ${app}.routing
+
+@NgModule({
+    imports: [
+        BrowserModule,
+        HttpModule,
+        AppRoutingModule
+    ],
+    declarations: [${App}Component],
+    providers: [/* TODO: Providers go here */],
+    bootstrap: [${App}Component],
+})
+export class ${App}Module {}
+${cursor}]]></code>
+        <description><![CDATA[Angular Root Module]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="aModuleRouting" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
+import { ${Name}Component } from './${name}.component';
+
+const routes: Routes = [{ path: '${path}', component: ${Name}Component }];
+
+@NgModule({
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule]
+})
+export class ${Name}RoutingModule {}
+
+export const routedComponents = [${Name}Component];]]></code>
+        <description><![CDATA[Angular routing module file (forChild)]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="aModule" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[import { NgModule } from '@angular/core';
+
+import { ${Name}Component } from './${name}.component';
+
+@NgModule({
+    imports: [],
+    exports: [],
+    declarations: [${Name}Component],
+    providers: []
+})
+export class ${Name}Module {}
+${cursor}]]></code>
+        <description><![CDATA[Angular Module]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="aDirective" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[import { Directive } from '@angular/core';
+
+@Directive({ selector: '[${selector-name}]' })
+export class ${Name}Directive {
+    constructor() {}
+}]]></code>
+        <description><![CDATA[Angular directive]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="aGuardCanActivate" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[import { Injectable } from '@angular/core';
+import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot } from '@angular/router';
+
+@Injectable()
+export class ${Name}Guard implements CanActivate {
+    constructor() {}
+
+    canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+        return true;${cursor}
+    }
+}]]></code>
+        <description><![CDATA[Angular CanActivate guard]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="aGuardCanActivateChild" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[import { Injectable } from '@angular/core';
+import { ActivatedRouteSnapshot, CanActivateChild, RouterStateSnapshot } from '@angular/router';
+
+@Injectable()
+export class ${Name}Guard implements CanActivateChild {
+    constructor() {}
+
+    canActivateChild(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+        return true;${cursor}
+    }
+}]]></code>
+        <description><![CDATA[Angular CanActivateChild guard]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="aGuardCanLoad" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[import { Injectable } from '@angular/core';
+import { CanLoad, Route } from '@angular/router';
+
+@Injectable()
+export class ${Name}Guard implements CanLoad {
+    constructor() {}
+
+    canLoad(route: Route) {
+        return true;${cursor}
+    }
+}]]></code>
+        <description><![CDATA[Angular CanLoad guard]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="aGuardCanDeactivate" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[import { Injectable } from '@angular/core';
+import { ActivatedRouteSnapshot, CanDeactivate, RouterStateSnapshot } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
+
+import { ${Name}Component } from './${filename}.component';
+
+// Consider using this interface for all CanDeactivate guards,
+// and have your components implement this interface, too.
+//
+//   e.g. export class CanDeactivateGuard implements CanDeactivate<CanComponentDeactivate> {
+//
+// export interface CanComponentDeactivate {
+// canDeactivate: () => any;
+// }
+
+@Injectable()
+export class ${GuardName}Guard implements CanDeactivate<${Name}Component> {
+    canDeactivate(
+        component: ${Name}Component,
+        currentRoute: ActivatedRouteSnapshot,
+        currentState: RouterStateSnapshot
+    ): Observable<boolean> | Promise<boolean> | boolean {
+        return false;${cursor}
+    }
+}]]></code>
+        <description><![CDATA[Angular CanDeactivate guard]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="aRouterEvents" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[checkEvents() {
+    this.router.events.subscribe(event => {
+        switch(true) {
+            case event instanceof ${eventName}:
+                ${cursor}
+            break;
+
+            default:
+            break;
+        }
+    });
+}]]></code>
+        <description><![CDATA[Angular Router Events]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="aCtorSkipSelf" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[constructor(@Optional() @SkipSelf() parentModule: ${ModuleName}) {
+    if(parentModule) {
+        const msg = `${ModuleName} has already been loaded. 
+            Import ${ModuleName} once, only, in the root AppModule.`;
+
+        throw new Error(msg);
+    }
+}]]></code>
+        <description><![CDATA[Angular Module SkipSelf constructor]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="aResolver" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { ${Name}Service } from './${TM_FILENAME_BASE}/resolver/${cursor}/}service';
+import { Router, Resolve, RouterStateSnapshot, ActivatedRouteSnapshot } from '@angular/router';
+
+// Resolvers have to fetch for some data hence the service
+
+@Injectable()
+export class ${Name}Resolver implements Resolve<any> {
+    constructor(private ${name}Service: ${Name}Service, private router: Router) {}
+
+    resolve(route: ActivatedRouteSnapshot): Observable<any> | Promise<any> | any {
+        return this.${name}Service.get();
+    }
+}]]></code>
+        <description><![CDATA[Angular Resolver]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="rxObservable" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[import { Observable } from 'rxjs/Observable';
+${cursor}]]></code>
+        <description><![CDATA[RxJS Observable import]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="rxReplaySubject" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[import { ReplaySubject } from 'rxjs/ReplaySubject';
+${cursor}]]></code>
+        <description><![CDATA[RxJS ReplaySubject import]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="rxSubject" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[import { Subject } from 'rxjs/Subject';
+${cursor}]]></code>
+        <description><![CDATA[RxJS Subject import]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="rxBehaviorSubject" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+${cursor}]]></code>
+        <description><![CDATA[RxJS BehaviorSubject import]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="rxAddOperator" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[import 'rxjs/add/operator/${map}';
+${cursor}]]></code>
+        <description><![CDATA[RxJS Add Operator import]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="rxAddObservable" xml:space="preserve" contexts="JavaScript-Code">
+        <code><![CDATA[import 'rxjs/add/observable/${of}';
+${cursor}]]></code>
+        <description><![CDATA[RxJS Add Observable import]]></description>
     </codetemplate>
 </codetemplates>
