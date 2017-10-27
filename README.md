@@ -41,13 +41,13 @@ Type part of a snippet, press <code>enter</code> or <code>tab</code>, and the sn
     <li><strong>aServiceHttp</strong> - service with <code>Http</code></li>
     <li><strong>aServiceHttpclient</strong> - service with <code>HttpClient</code></li>
     <li><strong>aCtorSkipSelf</strong> - angular <code>NgModule</code>'s <code>skipself</code> constructor</li>
-    <li><strong>aSubscribe</strong> - Rx Observable subscription</li>
+    <li><strong>aSubscribe</strong> - Rx <code>Observable</code> subscription</li>
     <li><strong>aResolver</strong> - resolver</li>
 </ol>
 
 <h3>TypeScript RxJS Snippets</h3>
 <ol>
-    <li><strong>rxObservable</strong> - Rx <code>Observale</code> import</li>
+    <li><strong>rxObservable</strong> - Rx <code>Observable</code> import</li>
     <li><strong>rxSubject</strong> - Rx <code>Subject</code> import</li>
     <li><strong>rxReplaySubject</strong> - Rx <code>ReplaySubject</code> import</li>
     <li><strong>rxBehaviorSubject</strong> - Rx <code>BehaviorSubject</code> import</li>
