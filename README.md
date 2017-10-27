@@ -10,10 +10,10 @@ Now I use <code>a</code> or <code>aNg</code> and <code>rx</code> as a prefix, to
 It is based on the Visual Studio Code implementation: <a href="https://github.com/johnpapa/vscode-angular2-snippets">https://github.com/johnpapa/vscode-angular2-snippets</a>
 This extension for NetBeans adds snippets for Angular for TypeScript and HTML.
 
-<h3>TypeScript</h3>
+<h3>TypeScript (old screenshot)</h3>
 <img src="images/NbAngular2TSSnippets.gif" alt="Use Extension" />
 
-<h3>HTML</h3>
+<h3>HTML (old screenshot)</h3>
 <img src="images/NbAngular2HTMLSnippets.gif" alt="Use Extension" />
 
 <h2>Usage</h2>
