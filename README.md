@@ -52,7 +52,7 @@ Type part of a snippet, press <code>enter</code> or <code>tab</code>, and the sn
     <li><strong>rxReplaySubject</strong> - Rx <code>ReplaySubject</code> import</li>
     <li><strong>rxBehaviorSubject</strong> - Rx <code>BehaviorSubject</code> import</li>
     <li><strong>rxAddOperator</strong> - Rx add operator import</li>
-    <li><strong>rxAddObservable</strong> - Rx add observale import</li>
+    <li><strong>rxAddObservable</strong> - Rx add observable import</li>
 </ol>
 
 <h3>HTML Snippets</h3>
