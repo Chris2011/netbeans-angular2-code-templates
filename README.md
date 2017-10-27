@@ -1,6 +1,12 @@
 <h1>Angular TypeScript Snippets for NetBeans</h1>
 <h3>Now Updated for Angular 4.3.0 release</h3>
 
+<h3>Biggest change</h3>
+Now I use camelCase, because NetBeans has a problem when you type <code>a-</code>.
+The code completion will disappear. So this will not happen with camelCase.
+
+Now I use <code>a</code> or <code>aNg</code> and <code>rx</code> as a prefix, to be faster while typing. 
+
 It is based on the Visual Studio Code implementation: <a href="https://github.com/johnpapa/vscode-angular2-snippets">https://github.com/johnpapa/vscode-angular2-snippets</a>
 This extension for NetBeans adds snippets for Angular for TypeScript and HTML.
 
