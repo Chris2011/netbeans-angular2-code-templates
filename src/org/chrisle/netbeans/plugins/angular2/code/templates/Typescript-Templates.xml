@@ -120,7 +120,6 @@ export class LogInterceptor implements HttpInterceptor {
             }
         });
     }
-}
 }]]></code>
         <description><![CDATA[Angular HttpInterceptor for Logging HttpClient]]></description>
     </codetemplate>
@@ -139,7 +138,6 @@ export class HeaderInterceptor implements HttpInterceptor {
 
         return next.handle(authReq);
     }
-}
 }]]></code>
         <description><![CDATA[Angular HttpInterceptor for headers HttpClient]]></description>
     </codetemplate>
@@ -155,7 +153,6 @@ export class HeaderInterceptor implements HttpInterceptor {
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         return next.handle(req);
     }
-}
 }]]></code>
         <description><![CDATA[Empty Angular HttpInterceptor for HttpClient]]></description>
     </codetemplate>
