@@ -11,7 +11,7 @@ This extension for NetBeans adds snippets for Angular for TypeScript and HTML.
 <img src="images/NbAngular2HTMLSnippets.gif" alt="Use Extension" />
 
 <h2>Usage</h2>
-Type part of a snippet, press <strong>enter</strong> or <strong>tab</strong>, and the snippet unfolds.
+Type part of a snippet, press <code>enter</code> or <code>tab</code>, and the snippet unfolds.
 
 <h3>TypeScript Angular Snippets</h3>
 <ol>
@@ -46,17 +46,17 @@ Type part of a snippet, press <strong>enter</strong> or <strong>tab</strong>, an
 </ol>
 
 <h3>TypeScript RxJS Snippets</h3>
-<ul>
-    <li><strong>rxObservable</strong> - Rx <strong>Observale</strong> import</li>
-    <li><strong>rxSubject</strong> - Rx <strong>Subject</strong> import</li>
-    <li><strong>rxReplaySubject</strong> - Rx <strong>ReplaySubject</strong> import</li>
-    <li><strong>rxBehaviorSubject</strong> - Rx <strong>BehaviorSubject</strong> import</li>
+<ol>
+    <li><strong>rxObservable</strong> - Rx <code>Observale</code> import</li>
+    <li><strong>rxSubject</strong> - Rx <code>Subject</code> import</li>
+    <li><strong>rxReplaySubject</strong> - Rx <code>ReplaySubject</code> import</li>
+    <li><strong>rxBehaviorSubject</strong> - Rx <code>BehaviorSubject</code> import</li>
     <li><strong>rxAddOperator</strong> - Rx add operator import</li>
     <li><strong>rxAddObservable</strong> - Rx add observale import</li>
-</ul>
+</ol>
 
 <h3>HTML Snippets</h3>
-<ul>
+<ol>
     <li><strong>aClass</strong> - <code>[class]</code> binding</li>
     <li><strong>aNgClass</strong> - <code>ngClass</code></li>
     <li><strong>aNgContainer</strong> - <code>&lt;ng-container&gt;</code> element</li>
@@ -76,12 +76,12 @@ Type part of a snippet, press <strong>enter</strong> or <strong>tab</strong>, an
     <li><strong>aRouterLinkParam</strong> - <code>routerLink</code> with a route parameter</li>
     <li><strong>aSelect</strong> - <code>&lt;select&gt;</code> control</li>
     <li><strong>aStyle</strong> - <code>[style]</code> binding</li>
-</ul>
+</ol>
 
 
 <h2>How to install</h2>
 <p>Install the plugin.</p>
-<p>Test it into a TypeScript or HTML file (Examples: typescript shortcut <strong>aPipe</strong> + TAB => import { Pipe, PipeTransform..., html shortcut <strong>aNgSwitch</strong> + TAB => &lt;div [ngSwitch]=...", ...)</p>
+<p>Test it into a TypeScript or HTML file (Examples: typescript shortcut <code>aPipe</code> + TAB => import { Pipe, PipeTransform..., html shortcut <code>aNgSwitch</code> + TAB => &lt;div [ngSwitch]=...", ...)</p>
 
 <h2>Known Bugs</h2>
 HTML code completion doesn't include the code templates, but the code templates are working well. A Ticket was created: https://netbeans.org/bugzilla/show_bug.cgi?id=250321
